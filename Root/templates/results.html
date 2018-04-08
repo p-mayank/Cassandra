@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result Set</title>
+</head>
+<body>
+	{% if question_number=='q1' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>DateTime</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.datetime}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q2' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>DateTime</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>Keyword</th>
+		<th>LikeCount</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.datetime}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.keywords}}</td>
+		<td>{{element.like_count}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q3' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>DateTime</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>Hashtag</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.datetime}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.hashtags}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q4' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>DateTime</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>Mention</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.datetime}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.mentions}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q5' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>Date</th>
+		<th>LikeCount</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.date}}</td>
+		<td>{{element.like_count}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q6' %}
+	<table>
+	<tr>
+		<th>Author</th>
+		<th>DateTime</th>
+		<th>Location</th>
+		<th>TweetId</th>
+		<th>TweetText</th>
+		<th>AuthorID</th>
+		<th>Language</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.author}}</td>
+		<td>{{element.datetime}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.tid}}</td>
+		<td>{{element.tweet_text}}</td>
+		<td>{{element.author_id}}</td>
+		<td>{{element.lang}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q7' %}
+	<table>
+	<tr>
+		<th>Hashtags</th>
+		<th>Count</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.hashtags}}</td>
+		<td>{{element.count}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q8' %}
+	{% for element in resultset %}
+	<h4>Deleted {{element.count}} rows!!</h4>
+	{% endfor %}
+	{% endif %}
+	{% if question_number=='q1midsem' %}
+	<table>
+	<tr>
+		<th>Hashtag</th>
+		<th>Location</th>
+		<th>Count</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.hashtag}}</td>
+		<td>{{element.location}}</td>
+		<td>{{element.count}}</td>
+	</tr>
+	{% if loop.last %}
+	<h4>{{loop.length}} Rows!!</h4>
+	{% endif %}
+	{% endfor %}
+	</table>
+	{% endif %}
+	{% if question_number=='q2midsem' %}
+	<table>
+	<tr>
+		<th>Date</th>
+		<th>Mention-Hashtag</th>
+		<th>Count</th>
+	</tr>
+	{% for element in resultset %}
+	<tr>
+		<td>{{element.date}}</td>
+		<td>{{element.mention}}-{{element.hashtag}}</td>
+		<td>{{element.count}}</td>
+	</tr>
+	{% if loop.last %}
+	<h4>{{loop.length}} Rows!!</h4>
+	{% endif %}
+	{% endfor %}
+	</table>
+	{% endif %}
+</body>
+</html>

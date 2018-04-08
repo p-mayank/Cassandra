@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Process</title>
+</head>
+<body>
+	{{display_text}}
+	<form method="post" action="/result">
+		<input type="text" name="keyword">
+		<input type="hidden" name="question_number" value="{{ q_number }}">
+		<button type="submit">Execute</button>
+	</form>
+</body>
+</html>

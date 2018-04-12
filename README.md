@@ -1,5 +1,5 @@
 # Cassandra
-Extracting trends from twitter dataset downloading using Twitter API, using cassandra DB.
+Extracting trends from twitter dataset downloaded using Twitter API, using cassandra DB.
 
 * Please run the loadq file inside the dataset folder to create the initial tables. DB used is : 'twitter_db'
 
